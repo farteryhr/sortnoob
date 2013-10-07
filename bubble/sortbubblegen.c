@@ -3,7 +3,6 @@ int main(void)
 {
 	int n;
 	const char *varnamet="t",*varnamelong="txchg",*varname;
-	const char *
 	scanf("%d",&n);
 	if(n<1||n>26)
 	{
