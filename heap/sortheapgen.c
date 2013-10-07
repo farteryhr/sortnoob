@@ -46,9 +46,9 @@ void heapadjust(int index, int sizeall, int depth)
 	int nchild=index*2+1;
 	//printf("nchild: %d\n",nchild);
 	//scanf("%d",&nchild);
-    if(nchild<sizeall)
-    {
-        if (nchild==sizeall-1)
+	if(nchild<sizeall)
+	{
+		if (nchild==sizeall-1)
 		{
 			printf
 			(
@@ -125,9 +125,9 @@ int main(void)
 	printf(");\n");
 	
 	for(xhl=n/2-1;xhl>=0;xhl--)
-        heapadjust(xhl,n,1);
-    for(xhl=n-1;xhl>0;xhl--)
-    {
+		heapadjust(xhl,n,1);
+	for(xhl=n-1;xhl>0;xhl--)
+	{
 		itemxchg(0,xhl,1);
 		heapadjust(0,xhl,1);
 	}
