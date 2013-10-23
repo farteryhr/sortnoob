@@ -1,0 +1,5148 @@
+#include <stdio.h>
+int a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z;
+int ta,tb,tc,td,te,tf,tg,th,ti,tj,tk,tl,tm,tn,to,tp,tq,tr,ts,tt,tu,tv,tw,tx,ty,tz;
+void merge_b_c_b_OK()
+{
+	tc=b;
+}
+void merge_b_c_OK_c()
+{
+	tc=c;
+}
+void merge_b_c_b_c()
+{
+	if(b>c)
+	{
+		tb=c;
+		merge_b_c_b_OK();
+	}
+	else
+	{
+		tb=b;
+		merge_b_c_OK_c();
+	}
+}
+void merge_a_c_a_OK()
+{
+	tc=a;
+}
+void merge_a_c_OK_c()
+{
+	tc=c;
+}
+void merge_a_c_a_c()
+{
+	if(a>c)
+	{
+		tb=c;
+		merge_a_c_a_OK();
+	}
+	else
+	{
+		tb=a;
+		merge_a_c_OK_c();
+	}
+}
+void merge_a_c_OK_b()
+{
+	tb=b;
+	tc=c;
+}
+void merge_a_c_a_b()
+{
+	if(a>b)
+	{
+		ta=b;
+		merge_a_c_a_c();
+	}
+	else
+	{
+		ta=a;
+		merge_a_c_OK_b();
+	}
+}
+void merge_e_f_e_OK()
+{
+	tf=e;
+}
+void merge_e_f_OK_f()
+{
+	tf=f;
+}
+void merge_e_f_e_f()
+{
+	if(e>f)
+	{
+		te=f;
+		merge_e_f_e_OK();
+	}
+	else
+	{
+		te=e;
+		merge_e_f_OK_f();
+	}
+}
+void merge_d_f_d_OK()
+{
+	tf=d;
+}
+void merge_d_f_OK_f()
+{
+	tf=f;
+}
+void merge_d_f_d_f()
+{
+	if(d>f)
+	{
+		te=f;
+		merge_d_f_d_OK();
+	}
+	else
+	{
+		te=d;
+		merge_d_f_OK_f();
+	}
+}
+void merge_d_f_OK_e()
+{
+	te=e;
+	tf=f;
+}
+void merge_d_f_d_e()
+{
+	if(d>e)
+	{
+		td=e;
+		merge_d_f_d_f();
+	}
+	else
+	{
+		td=d;
+		merge_d_f_OK_e();
+	}
+}
+void merge_a_f_c_OK()
+{
+	tf=c;
+}
+void merge_a_f_b_OK()
+{
+	te=b;
+	tf=c;
+}
+void merge_a_f_a_OK()
+{
+	td=a;
+	te=b;
+	tf=c;
+}
+void merge_a_f_OK_f()
+{
+	tf=f;
+}
+void merge_a_f_c_f()
+{
+	if(c>f)
+	{
+		te=f;
+		merge_a_f_c_OK();
+	}
+	else
+	{
+		te=c;
+		merge_a_f_OK_f();
+	}
+}
+void merge_a_f_b_f()
+{
+	if(b>f)
+	{
+		td=f;
+		merge_a_f_b_OK();
+	}
+	else
+	{
+		td=b;
+		merge_a_f_c_f();
+	}
+}
+void merge_a_f_a_f()
+{
+	if(a>f)
+	{
+		tc=f;
+		merge_a_f_a_OK();
+	}
+	else
+	{
+		tc=a;
+		merge_a_f_b_f();
+	}
+}
+void merge_a_f_OK_e()
+{
+	te=e;
+	tf=f;
+}
+void merge_a_f_c_e()
+{
+	if(c>e)
+	{
+		td=e;
+		merge_a_f_c_f();
+	}
+	else
+	{
+		td=c;
+		merge_a_f_OK_e();
+	}
+}
+void merge_a_f_b_e()
+{
+	if(b>e)
+	{
+		tc=e;
+		merge_a_f_b_f();
+	}
+	else
+	{
+		tc=b;
+		merge_a_f_c_e();
+	}
+}
+void merge_a_f_a_e()
+{
+	if(a>e)
+	{
+		tb=e;
+		merge_a_f_a_f();
+	}
+	else
+	{
+		tb=a;
+		merge_a_f_b_e();
+	}
+}
+void merge_a_f_OK_d()
+{
+	td=d;
+	te=e;
+	tf=f;
+}
+void merge_a_f_c_d()
+{
+	if(c>d)
+	{
+		tc=d;
+		merge_a_f_c_e();
+	}
+	else
+	{
+		tc=c;
+		merge_a_f_OK_d();
+	}
+}
+void merge_a_f_b_d()
+{
+	if(b>d)
+	{
+		tb=d;
+		merge_a_f_b_e();
+	}
+	else
+	{
+		tb=b;
+		merge_a_f_c_d();
+	}
+}
+void merge_a_f_a_d()
+{
+	if(a>d)
+	{
+		ta=d;
+		merge_a_f_a_e();
+	}
+	else
+	{
+		ta=a;
+		merge_a_f_b_d();
+	}
+}
+void merge_h_i_h_OK()
+{
+	ti=h;
+}
+void merge_h_i_OK_i()
+{
+	ti=i;
+}
+void merge_h_i_h_i()
+{
+	if(h>i)
+	{
+		th=i;
+		merge_h_i_h_OK();
+	}
+	else
+	{
+		th=h;
+		merge_h_i_OK_i();
+	}
+}
+void merge_g_i_g_OK()
+{
+	ti=g;
+}
+void merge_g_i_OK_i()
+{
+	ti=i;
+}
+void merge_g_i_g_i()
+{
+	if(g>i)
+	{
+		th=i;
+		merge_g_i_g_OK();
+	}
+	else
+	{
+		th=g;
+		merge_g_i_OK_i();
+	}
+}
+void merge_g_i_OK_h()
+{
+	th=h;
+	ti=i;
+}
+void merge_g_i_g_h()
+{
+	if(g>h)
+	{
+		tg=h;
+		merge_g_i_g_i();
+	}
+	else
+	{
+		tg=g;
+		merge_g_i_OK_h();
+	}
+}
+void merge_j_k_j_OK()
+{
+	tk=j;
+}
+void merge_j_k_OK_k()
+{
+	tk=k;
+}
+void merge_j_k_j_k()
+{
+	if(j>k)
+	{
+		tj=k;
+		merge_j_k_j_OK();
+	}
+	else
+	{
+		tj=j;
+		merge_j_k_OK_k();
+	}
+}
+void merge_l_m_l_OK()
+{
+	tm=l;
+}
+void merge_l_m_OK_m()
+{
+	tm=m;
+}
+void merge_l_m_l_m()
+{
+	if(l>m)
+	{
+		tl=m;
+		merge_l_m_l_OK();
+	}
+	else
+	{
+		tl=l;
+		merge_l_m_OK_m();
+	}
+}
+void merge_j_m_k_OK()
+{
+	tm=k;
+}
+void merge_j_m_j_OK()
+{
+	tl=j;
+	tm=k;
+}
+void merge_j_m_OK_m()
+{
+	tm=m;
+}
+void merge_j_m_k_m()
+{
+	if(k>m)
+	{
+		tl=m;
+		merge_j_m_k_OK();
+	}
+	else
+	{
+		tl=k;
+		merge_j_m_OK_m();
+	}
+}
+void merge_j_m_j_m()
+{
+	if(j>m)
+	{
+		tk=m;
+		merge_j_m_j_OK();
+	}
+	else
+	{
+		tk=j;
+		merge_j_m_k_m();
+	}
+}
+void merge_j_m_OK_l()
+{
+	tl=l;
+	tm=m;
+}
+void merge_j_m_k_l()
+{
+	if(k>l)
+	{
+		tk=l;
+		merge_j_m_k_m();
+	}
+	else
+	{
+		tk=k;
+		merge_j_m_OK_l();
+	}
+}
+void merge_j_m_j_l()
+{
+	if(j>l)
+	{
+		tj=l;
+		merge_j_m_j_m();
+	}
+	else
+	{
+		tj=j;
+		merge_j_m_k_l();
+	}
+}
+void merge_g_m_i_OK()
+{
+	tm=i;
+}
+void merge_g_m_h_OK()
+{
+	tl=h;
+	tm=i;
+}
+void merge_g_m_g_OK()
+{
+	tk=g;
+	tl=h;
+	tm=i;
+}
+void merge_g_m_OK_m()
+{
+	tm=m;
+}
+void merge_g_m_i_m()
+{
+	if(i>m)
+	{
+		tl=m;
+		merge_g_m_i_OK();
+	}
+	else
+	{
+		tl=i;
+		merge_g_m_OK_m();
+	}
+}
+void merge_g_m_h_m()
+{
+	if(h>m)
+	{
+		tk=m;
+		merge_g_m_h_OK();
+	}
+	else
+	{
+		tk=h;
+		merge_g_m_i_m();
+	}
+}
+void merge_g_m_g_m()
+{
+	if(g>m)
+	{
+		tj=m;
+		merge_g_m_g_OK();
+	}
+	else
+	{
+		tj=g;
+		merge_g_m_h_m();
+	}
+}
+void merge_g_m_OK_l()
+{
+	tl=l;
+	tm=m;
+}
+void merge_g_m_i_l()
+{
+	if(i>l)
+	{
+		tk=l;
+		merge_g_m_i_m();
+	}
+	else
+	{
+		tk=i;
+		merge_g_m_OK_l();
+	}
+}
+void merge_g_m_h_l()
+{
+	if(h>l)
+	{
+		tj=l;
+		merge_g_m_h_m();
+	}
+	else
+	{
+		tj=h;
+		merge_g_m_i_l();
+	}
+}
+void merge_g_m_g_l()
+{
+	if(g>l)
+	{
+		ti=l;
+		merge_g_m_g_m();
+	}
+	else
+	{
+		ti=g;
+		merge_g_m_h_l();
+	}
+}
+void merge_g_m_OK_k()
+{
+	tk=k;
+	tl=l;
+	tm=m;
+}
+void merge_g_m_i_k()
+{
+	if(i>k)
+	{
+		tj=k;
+		merge_g_m_i_l();
+	}
+	else
+	{
+		tj=i;
+		merge_g_m_OK_k();
+	}
+}
+void merge_g_m_h_k()
+{
+	if(h>k)
+	{
+		ti=k;
+		merge_g_m_h_l();
+	}
+	else
+	{
+		ti=h;
+		merge_g_m_i_k();
+	}
+}
+void merge_g_m_g_k()
+{
+	if(g>k)
+	{
+		th=k;
+		merge_g_m_g_l();
+	}
+	else
+	{
+		th=g;
+		merge_g_m_h_k();
+	}
+}
+void merge_g_m_OK_j()
+{
+	tj=j;
+	tk=k;
+	tl=l;
+	tm=m;
+}
+void merge_g_m_i_j()
+{
+	if(i>j)
+	{
+		ti=j;
+		merge_g_m_i_k();
+	}
+	else
+	{
+		ti=i;
+		merge_g_m_OK_j();
+	}
+}
+void merge_g_m_h_j()
+{
+	if(h>j)
+	{
+		th=j;
+		merge_g_m_h_k();
+	}
+	else
+	{
+		th=h;
+		merge_g_m_i_j();
+	}
+}
+void merge_g_m_g_j()
+{
+	if(g>j)
+	{
+		tg=j;
+		merge_g_m_g_k();
+	}
+	else
+	{
+		tg=g;
+		merge_g_m_h_j();
+	}
+}
+void merge_a_m_f_OK()
+{
+	tm=f;
+}
+void merge_a_m_e_OK()
+{
+	tl=e;
+	tm=f;
+}
+void merge_a_m_d_OK()
+{
+	tk=d;
+	tl=e;
+	tm=f;
+}
+void merge_a_m_c_OK()
+{
+	tj=c;
+	tk=d;
+	tl=e;
+	tm=f;
+}
+void merge_a_m_b_OK()
+{
+	ti=b;
+	tj=c;
+	tk=d;
+	tl=e;
+	tm=f;
+}
+void merge_a_m_a_OK()
+{
+	th=a;
+	ti=b;
+	tj=c;
+	tk=d;
+	tl=e;
+	tm=f;
+}
+void merge_a_m_OK_m()
+{
+	tm=m;
+}
+void merge_a_m_f_m()
+{
+	if(f>m)
+	{
+		tl=m;
+		merge_a_m_f_OK();
+	}
+	else
+	{
+		tl=f;
+		merge_a_m_OK_m();
+	}
+}
+void merge_a_m_e_m()
+{
+	if(e>m)
+	{
+		tk=m;
+		merge_a_m_e_OK();
+	}
+	else
+	{
+		tk=e;
+		merge_a_m_f_m();
+	}
+}
+void merge_a_m_d_m()
+{
+	if(d>m)
+	{
+		tj=m;
+		merge_a_m_d_OK();
+	}
+	else
+	{
+		tj=d;
+		merge_a_m_e_m();
+	}
+}
+void merge_a_m_c_m()
+{
+	if(c>m)
+	{
+		ti=m;
+		merge_a_m_c_OK();
+	}
+	else
+	{
+		ti=c;
+		merge_a_m_d_m();
+	}
+}
+void merge_a_m_b_m()
+{
+	if(b>m)
+	{
+		th=m;
+		merge_a_m_b_OK();
+	}
+	else
+	{
+		th=b;
+		merge_a_m_c_m();
+	}
+}
+void merge_a_m_a_m()
+{
+	if(a>m)
+	{
+		tg=m;
+		merge_a_m_a_OK();
+	}
+	else
+	{
+		tg=a;
+		merge_a_m_b_m();
+	}
+}
+void merge_a_m_OK_l()
+{
+	tl=l;
+	tm=m;
+}
+void merge_a_m_f_l()
+{
+	if(f>l)
+	{
+		tk=l;
+		merge_a_m_f_m();
+	}
+	else
+	{
+		tk=f;
+		merge_a_m_OK_l();
+	}
+}
+void merge_a_m_e_l()
+{
+	if(e>l)
+	{
+		tj=l;
+		merge_a_m_e_m();
+	}
+	else
+	{
+		tj=e;
+		merge_a_m_f_l();
+	}
+}
+void merge_a_m_d_l()
+{
+	if(d>l)
+	{
+		ti=l;
+		merge_a_m_d_m();
+	}
+	else
+	{
+		ti=d;
+		merge_a_m_e_l();
+	}
+}
+void merge_a_m_c_l()
+{
+	if(c>l)
+	{
+		th=l;
+		merge_a_m_c_m();
+	}
+	else
+	{
+		th=c;
+		merge_a_m_d_l();
+	}
+}
+void merge_a_m_b_l()
+{
+	if(b>l)
+	{
+		tg=l;
+		merge_a_m_b_m();
+	}
+	else
+	{
+		tg=b;
+		merge_a_m_c_l();
+	}
+}
+void merge_a_m_a_l()
+{
+	if(a>l)
+	{
+		tf=l;
+		merge_a_m_a_m();
+	}
+	else
+	{
+		tf=a;
+		merge_a_m_b_l();
+	}
+}
+void merge_a_m_OK_k()
+{
+	tk=k;
+	tl=l;
+	tm=m;
+}
+void merge_a_m_f_k()
+{
+	if(f>k)
+	{
+		tj=k;
+		merge_a_m_f_l();
+	}
+	else
+	{
+		tj=f;
+		merge_a_m_OK_k();
+	}
+}
+void merge_a_m_e_k()
+{
+	if(e>k)
+	{
+		ti=k;
+		merge_a_m_e_l();
+	}
+	else
+	{
+		ti=e;
+		merge_a_m_f_k();
+	}
+}
+void merge_a_m_d_k()
+{
+	if(d>k)
+	{
+		th=k;
+		merge_a_m_d_l();
+	}
+	else
+	{
+		th=d;
+		merge_a_m_e_k();
+	}
+}
+void merge_a_m_c_k()
+{
+	if(c>k)
+	{
+		tg=k;
+		merge_a_m_c_l();
+	}
+	else
+	{
+		tg=c;
+		merge_a_m_d_k();
+	}
+}
+void merge_a_m_b_k()
+{
+	if(b>k)
+	{
+		tf=k;
+		merge_a_m_b_l();
+	}
+	else
+	{
+		tf=b;
+		merge_a_m_c_k();
+	}
+}
+void merge_a_m_a_k()
+{
+	if(a>k)
+	{
+		te=k;
+		merge_a_m_a_l();
+	}
+	else
+	{
+		te=a;
+		merge_a_m_b_k();
+	}
+}
+void merge_a_m_OK_j()
+{
+	tj=j;
+	tk=k;
+	tl=l;
+	tm=m;
+}
+void merge_a_m_f_j()
+{
+	if(f>j)
+	{
+		ti=j;
+		merge_a_m_f_k();
+	}
+	else
+	{
+		ti=f;
+		merge_a_m_OK_j();
+	}
+}
+void merge_a_m_e_j()
+{
+	if(e>j)
+	{
+		th=j;
+		merge_a_m_e_k();
+	}
+	else
+	{
+		th=e;
+		merge_a_m_f_j();
+	}
+}
+void merge_a_m_d_j()
+{
+	if(d>j)
+	{
+		tg=j;
+		merge_a_m_d_k();
+	}
+	else
+	{
+		tg=d;
+		merge_a_m_e_j();
+	}
+}
+void merge_a_m_c_j()
+{
+	if(c>j)
+	{
+		tf=j;
+		merge_a_m_c_k();
+	}
+	else
+	{
+		tf=c;
+		merge_a_m_d_j();
+	}
+}
+void merge_a_m_b_j()
+{
+	if(b>j)
+	{
+		te=j;
+		merge_a_m_b_k();
+	}
+	else
+	{
+		te=b;
+		merge_a_m_c_j();
+	}
+}
+void merge_a_m_a_j()
+{
+	if(a>j)
+	{
+		td=j;
+		merge_a_m_a_k();
+	}
+	else
+	{
+		td=a;
+		merge_a_m_b_j();
+	}
+}
+void merge_a_m_OK_i()
+{
+	ti=i;
+	tj=j;
+	tk=k;
+	tl=l;
+	tm=m;
+}
+void merge_a_m_f_i()
+{
+	if(f>i)
+	{
+		th=i;
+		merge_a_m_f_j();
+	}
+	else
+	{
+		th=f;
+		merge_a_m_OK_i();
+	}
+}
+void merge_a_m_e_i()
+{
+	if(e>i)
+	{
+		tg=i;
+		merge_a_m_e_j();
+	}
+	else
+	{
+		tg=e;
+		merge_a_m_f_i();
+	}
+}
+void merge_a_m_d_i()
+{
+	if(d>i)
+	{
+		tf=i;
+		merge_a_m_d_j();
+	}
+	else
+	{
+		tf=d;
+		merge_a_m_e_i();
+	}
+}
+void merge_a_m_c_i()
+{
+	if(c>i)
+	{
+		te=i;
+		merge_a_m_c_j();
+	}
+	else
+	{
+		te=c;
+		merge_a_m_d_i();
+	}
+}
+void merge_a_m_b_i()
+{
+	if(b>i)
+	{
+		td=i;
+		merge_a_m_b_j();
+	}
+	else
+	{
+		td=b;
+		merge_a_m_c_i();
+	}
+}
+void merge_a_m_a_i()
+{
+	if(a>i)
+	{
+		tc=i;
+		merge_a_m_a_j();
+	}
+	else
+	{
+		tc=a;
+		merge_a_m_b_i();
+	}
+}
+void merge_a_m_OK_h()
+{
+	th=h;
+	ti=i;
+	tj=j;
+	tk=k;
+	tl=l;
+	tm=m;
+}
+void merge_a_m_f_h()
+{
+	if(f>h)
+	{
+		tg=h;
+		merge_a_m_f_i();
+	}
+	else
+	{
+		tg=f;
+		merge_a_m_OK_h();
+	}
+}
+void merge_a_m_e_h()
+{
+	if(e>h)
+	{
+		tf=h;
+		merge_a_m_e_i();
+	}
+	else
+	{
+		tf=e;
+		merge_a_m_f_h();
+	}
+}
+void merge_a_m_d_h()
+{
+	if(d>h)
+	{
+		te=h;
+		merge_a_m_d_i();
+	}
+	else
+	{
+		te=d;
+		merge_a_m_e_h();
+	}
+}
+void merge_a_m_c_h()
+{
+	if(c>h)
+	{
+		td=h;
+		merge_a_m_c_i();
+	}
+	else
+	{
+		td=c;
+		merge_a_m_d_h();
+	}
+}
+void merge_a_m_b_h()
+{
+	if(b>h)
+	{
+		tc=h;
+		merge_a_m_b_i();
+	}
+	else
+	{
+		tc=b;
+		merge_a_m_c_h();
+	}
+}
+void merge_a_m_a_h()
+{
+	if(a>h)
+	{
+		tb=h;
+		merge_a_m_a_i();
+	}
+	else
+	{
+		tb=a;
+		merge_a_m_b_h();
+	}
+}
+void merge_a_m_OK_g()
+{
+	tg=g;
+	th=h;
+	ti=i;
+	tj=j;
+	tk=k;
+	tl=l;
+	tm=m;
+}
+void merge_a_m_f_g()
+{
+	if(f>g)
+	{
+		tf=g;
+		merge_a_m_f_h();
+	}
+	else
+	{
+		tf=f;
+		merge_a_m_OK_g();
+	}
+}
+void merge_a_m_e_g()
+{
+	if(e>g)
+	{
+		te=g;
+		merge_a_m_e_h();
+	}
+	else
+	{
+		te=e;
+		merge_a_m_f_g();
+	}
+}
+void merge_a_m_d_g()
+{
+	if(d>g)
+	{
+		td=g;
+		merge_a_m_d_h();
+	}
+	else
+	{
+		td=d;
+		merge_a_m_e_g();
+	}
+}
+void merge_a_m_c_g()
+{
+	if(c>g)
+	{
+		tc=g;
+		merge_a_m_c_h();
+	}
+	else
+	{
+		tc=c;
+		merge_a_m_d_g();
+	}
+}
+void merge_a_m_b_g()
+{
+	if(b>g)
+	{
+		tb=g;
+		merge_a_m_b_h();
+	}
+	else
+	{
+		tb=b;
+		merge_a_m_c_g();
+	}
+}
+void merge_a_m_a_g()
+{
+	if(a>g)
+	{
+		ta=g;
+		merge_a_m_a_h();
+	}
+	else
+	{
+		ta=a;
+		merge_a_m_b_g();
+	}
+}
+void merge_o_p_o_OK()
+{
+	tp=o;
+}
+void merge_o_p_OK_p()
+{
+	tp=p;
+}
+void merge_o_p_o_p()
+{
+	if(o>p)
+	{
+		to=p;
+		merge_o_p_o_OK();
+	}
+	else
+	{
+		to=o;
+		merge_o_p_OK_p();
+	}
+}
+void merge_n_p_n_OK()
+{
+	tp=n;
+}
+void merge_n_p_OK_p()
+{
+	tp=p;
+}
+void merge_n_p_n_p()
+{
+	if(n>p)
+	{
+		to=p;
+		merge_n_p_n_OK();
+	}
+	else
+	{
+		to=n;
+		merge_n_p_OK_p();
+	}
+}
+void merge_n_p_OK_o()
+{
+	to=o;
+	tp=p;
+}
+void merge_n_p_n_o()
+{
+	if(n>o)
+	{
+		tn=o;
+		merge_n_p_n_p();
+	}
+	else
+	{
+		tn=n;
+		merge_n_p_OK_o();
+	}
+}
+void merge_r_s_r_OK()
+{
+	ts=r;
+}
+void merge_r_s_OK_s()
+{
+	ts=s;
+}
+void merge_r_s_r_s()
+{
+	if(r>s)
+	{
+		tr=s;
+		merge_r_s_r_OK();
+	}
+	else
+	{
+		tr=r;
+		merge_r_s_OK_s();
+	}
+}
+void merge_q_s_q_OK()
+{
+	ts=q;
+}
+void merge_q_s_OK_s()
+{
+	ts=s;
+}
+void merge_q_s_q_s()
+{
+	if(q>s)
+	{
+		tr=s;
+		merge_q_s_q_OK();
+	}
+	else
+	{
+		tr=q;
+		merge_q_s_OK_s();
+	}
+}
+void merge_q_s_OK_r()
+{
+	tr=r;
+	ts=s;
+}
+void merge_q_s_q_r()
+{
+	if(q>r)
+	{
+		tq=r;
+		merge_q_s_q_s();
+	}
+	else
+	{
+		tq=q;
+		merge_q_s_OK_r();
+	}
+}
+void merge_n_s_p_OK()
+{
+	ts=p;
+}
+void merge_n_s_o_OK()
+{
+	tr=o;
+	ts=p;
+}
+void merge_n_s_n_OK()
+{
+	tq=n;
+	tr=o;
+	ts=p;
+}
+void merge_n_s_OK_s()
+{
+	ts=s;
+}
+void merge_n_s_p_s()
+{
+	if(p>s)
+	{
+		tr=s;
+		merge_n_s_p_OK();
+	}
+	else
+	{
+		tr=p;
+		merge_n_s_OK_s();
+	}
+}
+void merge_n_s_o_s()
+{
+	if(o>s)
+	{
+		tq=s;
+		merge_n_s_o_OK();
+	}
+	else
+	{
+		tq=o;
+		merge_n_s_p_s();
+	}
+}
+void merge_n_s_n_s()
+{
+	if(n>s)
+	{
+		tp=s;
+		merge_n_s_n_OK();
+	}
+	else
+	{
+		tp=n;
+		merge_n_s_o_s();
+	}
+}
+void merge_n_s_OK_r()
+{
+	tr=r;
+	ts=s;
+}
+void merge_n_s_p_r()
+{
+	if(p>r)
+	{
+		tq=r;
+		merge_n_s_p_s();
+	}
+	else
+	{
+		tq=p;
+		merge_n_s_OK_r();
+	}
+}
+void merge_n_s_o_r()
+{
+	if(o>r)
+	{
+		tp=r;
+		merge_n_s_o_s();
+	}
+	else
+	{
+		tp=o;
+		merge_n_s_p_r();
+	}
+}
+void merge_n_s_n_r()
+{
+	if(n>r)
+	{
+		to=r;
+		merge_n_s_n_s();
+	}
+	else
+	{
+		to=n;
+		merge_n_s_o_r();
+	}
+}
+void merge_n_s_OK_q()
+{
+	tq=q;
+	tr=r;
+	ts=s;
+}
+void merge_n_s_p_q()
+{
+	if(p>q)
+	{
+		tp=q;
+		merge_n_s_p_r();
+	}
+	else
+	{
+		tp=p;
+		merge_n_s_OK_q();
+	}
+}
+void merge_n_s_o_q()
+{
+	if(o>q)
+	{
+		to=q;
+		merge_n_s_o_r();
+	}
+	else
+	{
+		to=o;
+		merge_n_s_p_q();
+	}
+}
+void merge_n_s_n_q()
+{
+	if(n>q)
+	{
+		tn=q;
+		merge_n_s_n_r();
+	}
+	else
+	{
+		tn=n;
+		merge_n_s_o_q();
+	}
+}
+void merge_u_v_u_OK()
+{
+	tv=u;
+}
+void merge_u_v_OK_v()
+{
+	tv=v;
+}
+void merge_u_v_u_v()
+{
+	if(u>v)
+	{
+		tu=v;
+		merge_u_v_u_OK();
+	}
+	else
+	{
+		tu=u;
+		merge_u_v_OK_v();
+	}
+}
+void merge_t_v_t_OK()
+{
+	tv=t;
+}
+void merge_t_v_OK_v()
+{
+	tv=v;
+}
+void merge_t_v_t_v()
+{
+	if(t>v)
+	{
+		tu=v;
+		merge_t_v_t_OK();
+	}
+	else
+	{
+		tu=t;
+		merge_t_v_OK_v();
+	}
+}
+void merge_t_v_OK_u()
+{
+	tu=u;
+	tv=v;
+}
+void merge_t_v_t_u()
+{
+	if(t>u)
+	{
+		tt=u;
+		merge_t_v_t_v();
+	}
+	else
+	{
+		tt=t;
+		merge_t_v_OK_u();
+	}
+}
+void merge_w_x_w_OK()
+{
+	tx=w;
+}
+void merge_w_x_OK_x()
+{
+	tx=x;
+}
+void merge_w_x_w_x()
+{
+	if(w>x)
+	{
+		tw=x;
+		merge_w_x_w_OK();
+	}
+	else
+	{
+		tw=w;
+		merge_w_x_OK_x();
+	}
+}
+void merge_y_z_y_OK()
+{
+	tz=y;
+}
+void merge_y_z_OK_z()
+{
+	tz=z;
+}
+void merge_y_z_y_z()
+{
+	if(y>z)
+	{
+		ty=z;
+		merge_y_z_y_OK();
+	}
+	else
+	{
+		ty=y;
+		merge_y_z_OK_z();
+	}
+}
+void merge_w_z_x_OK()
+{
+	tz=x;
+}
+void merge_w_z_w_OK()
+{
+	ty=w;
+	tz=x;
+}
+void merge_w_z_OK_z()
+{
+	tz=z;
+}
+void merge_w_z_x_z()
+{
+	if(x>z)
+	{
+		ty=z;
+		merge_w_z_x_OK();
+	}
+	else
+	{
+		ty=x;
+		merge_w_z_OK_z();
+	}
+}
+void merge_w_z_w_z()
+{
+	if(w>z)
+	{
+		tx=z;
+		merge_w_z_w_OK();
+	}
+	else
+	{
+		tx=w;
+		merge_w_z_x_z();
+	}
+}
+void merge_w_z_OK_y()
+{
+	ty=y;
+	tz=z;
+}
+void merge_w_z_x_y()
+{
+	if(x>y)
+	{
+		tx=y;
+		merge_w_z_x_z();
+	}
+	else
+	{
+		tx=x;
+		merge_w_z_OK_y();
+	}
+}
+void merge_w_z_w_y()
+{
+	if(w>y)
+	{
+		tw=y;
+		merge_w_z_w_z();
+	}
+	else
+	{
+		tw=w;
+		merge_w_z_x_y();
+	}
+}
+void merge_t_z_v_OK()
+{
+	tz=v;
+}
+void merge_t_z_u_OK()
+{
+	ty=u;
+	tz=v;
+}
+void merge_t_z_t_OK()
+{
+	tx=t;
+	ty=u;
+	tz=v;
+}
+void merge_t_z_OK_z()
+{
+	tz=z;
+}
+void merge_t_z_v_z()
+{
+	if(v>z)
+	{
+		ty=z;
+		merge_t_z_v_OK();
+	}
+	else
+	{
+		ty=v;
+		merge_t_z_OK_z();
+	}
+}
+void merge_t_z_u_z()
+{
+	if(u>z)
+	{
+		tx=z;
+		merge_t_z_u_OK();
+	}
+	else
+	{
+		tx=u;
+		merge_t_z_v_z();
+	}
+}
+void merge_t_z_t_z()
+{
+	if(t>z)
+	{
+		tw=z;
+		merge_t_z_t_OK();
+	}
+	else
+	{
+		tw=t;
+		merge_t_z_u_z();
+	}
+}
+void merge_t_z_OK_y()
+{
+	ty=y;
+	tz=z;
+}
+void merge_t_z_v_y()
+{
+	if(v>y)
+	{
+		tx=y;
+		merge_t_z_v_z();
+	}
+	else
+	{
+		tx=v;
+		merge_t_z_OK_y();
+	}
+}
+void merge_t_z_u_y()
+{
+	if(u>y)
+	{
+		tw=y;
+		merge_t_z_u_z();
+	}
+	else
+	{
+		tw=u;
+		merge_t_z_v_y();
+	}
+}
+void merge_t_z_t_y()
+{
+	if(t>y)
+	{
+		tv=y;
+		merge_t_z_t_z();
+	}
+	else
+	{
+		tv=t;
+		merge_t_z_u_y();
+	}
+}
+void merge_t_z_OK_x()
+{
+	tx=x;
+	ty=y;
+	tz=z;
+}
+void merge_t_z_v_x()
+{
+	if(v>x)
+	{
+		tw=x;
+		merge_t_z_v_y();
+	}
+	else
+	{
+		tw=v;
+		merge_t_z_OK_x();
+	}
+}
+void merge_t_z_u_x()
+{
+	if(u>x)
+	{
+		tv=x;
+		merge_t_z_u_y();
+	}
+	else
+	{
+		tv=u;
+		merge_t_z_v_x();
+	}
+}
+void merge_t_z_t_x()
+{
+	if(t>x)
+	{
+		tu=x;
+		merge_t_z_t_y();
+	}
+	else
+	{
+		tu=t;
+		merge_t_z_u_x();
+	}
+}
+void merge_t_z_OK_w()
+{
+	tw=w;
+	tx=x;
+	ty=y;
+	tz=z;
+}
+void merge_t_z_v_w()
+{
+	if(v>w)
+	{
+		tv=w;
+		merge_t_z_v_x();
+	}
+	else
+	{
+		tv=v;
+		merge_t_z_OK_w();
+	}
+}
+void merge_t_z_u_w()
+{
+	if(u>w)
+	{
+		tu=w;
+		merge_t_z_u_x();
+	}
+	else
+	{
+		tu=u;
+		merge_t_z_v_w();
+	}
+}
+void merge_t_z_t_w()
+{
+	if(t>w)
+	{
+		tt=w;
+		merge_t_z_t_x();
+	}
+	else
+	{
+		tt=t;
+		merge_t_z_u_w();
+	}
+}
+void merge_n_z_s_OK()
+{
+	tz=s;
+}
+void merge_n_z_r_OK()
+{
+	ty=r;
+	tz=s;
+}
+void merge_n_z_q_OK()
+{
+	tx=q;
+	ty=r;
+	tz=s;
+}
+void merge_n_z_p_OK()
+{
+	tw=p;
+	tx=q;
+	ty=r;
+	tz=s;
+}
+void merge_n_z_o_OK()
+{
+	tv=o;
+	tw=p;
+	tx=q;
+	ty=r;
+	tz=s;
+}
+void merge_n_z_n_OK()
+{
+	tu=n;
+	tv=o;
+	tw=p;
+	tx=q;
+	ty=r;
+	tz=s;
+}
+void merge_n_z_OK_z()
+{
+	tz=z;
+}
+void merge_n_z_s_z()
+{
+	if(s>z)
+	{
+		ty=z;
+		merge_n_z_s_OK();
+	}
+	else
+	{
+		ty=s;
+		merge_n_z_OK_z();
+	}
+}
+void merge_n_z_r_z()
+{
+	if(r>z)
+	{
+		tx=z;
+		merge_n_z_r_OK();
+	}
+	else
+	{
+		tx=r;
+		merge_n_z_s_z();
+	}
+}
+void merge_n_z_q_z()
+{
+	if(q>z)
+	{
+		tw=z;
+		merge_n_z_q_OK();
+	}
+	else
+	{
+		tw=q;
+		merge_n_z_r_z();
+	}
+}
+void merge_n_z_p_z()
+{
+	if(p>z)
+	{
+		tv=z;
+		merge_n_z_p_OK();
+	}
+	else
+	{
+		tv=p;
+		merge_n_z_q_z();
+	}
+}
+void merge_n_z_o_z()
+{
+	if(o>z)
+	{
+		tu=z;
+		merge_n_z_o_OK();
+	}
+	else
+	{
+		tu=o;
+		merge_n_z_p_z();
+	}
+}
+void merge_n_z_n_z()
+{
+	if(n>z)
+	{
+		tt=z;
+		merge_n_z_n_OK();
+	}
+	else
+	{
+		tt=n;
+		merge_n_z_o_z();
+	}
+}
+void merge_n_z_OK_y()
+{
+	ty=y;
+	tz=z;
+}
+void merge_n_z_s_y()
+{
+	if(s>y)
+	{
+		tx=y;
+		merge_n_z_s_z();
+	}
+	else
+	{
+		tx=s;
+		merge_n_z_OK_y();
+	}
+}
+void merge_n_z_r_y()
+{
+	if(r>y)
+	{
+		tw=y;
+		merge_n_z_r_z();
+	}
+	else
+	{
+		tw=r;
+		merge_n_z_s_y();
+	}
+}
+void merge_n_z_q_y()
+{
+	if(q>y)
+	{
+		tv=y;
+		merge_n_z_q_z();
+	}
+	else
+	{
+		tv=q;
+		merge_n_z_r_y();
+	}
+}
+void merge_n_z_p_y()
+{
+	if(p>y)
+	{
+		tu=y;
+		merge_n_z_p_z();
+	}
+	else
+	{
+		tu=p;
+		merge_n_z_q_y();
+	}
+}
+void merge_n_z_o_y()
+{
+	if(o>y)
+	{
+		tt=y;
+		merge_n_z_o_z();
+	}
+	else
+	{
+		tt=o;
+		merge_n_z_p_y();
+	}
+}
+void merge_n_z_n_y()
+{
+	if(n>y)
+	{
+		ts=y;
+		merge_n_z_n_z();
+	}
+	else
+	{
+		ts=n;
+		merge_n_z_o_y();
+	}
+}
+void merge_n_z_OK_x()
+{
+	tx=x;
+	ty=y;
+	tz=z;
+}
+void merge_n_z_s_x()
+{
+	if(s>x)
+	{
+		tw=x;
+		merge_n_z_s_y();
+	}
+	else
+	{
+		tw=s;
+		merge_n_z_OK_x();
+	}
+}
+void merge_n_z_r_x()
+{
+	if(r>x)
+	{
+		tv=x;
+		merge_n_z_r_y();
+	}
+	else
+	{
+		tv=r;
+		merge_n_z_s_x();
+	}
+}
+void merge_n_z_q_x()
+{
+	if(q>x)
+	{
+		tu=x;
+		merge_n_z_q_y();
+	}
+	else
+	{
+		tu=q;
+		merge_n_z_r_x();
+	}
+}
+void merge_n_z_p_x()
+{
+	if(p>x)
+	{
+		tt=x;
+		merge_n_z_p_y();
+	}
+	else
+	{
+		tt=p;
+		merge_n_z_q_x();
+	}
+}
+void merge_n_z_o_x()
+{
+	if(o>x)
+	{
+		ts=x;
+		merge_n_z_o_y();
+	}
+	else
+	{
+		ts=o;
+		merge_n_z_p_x();
+	}
+}
+void merge_n_z_n_x()
+{
+	if(n>x)
+	{
+		tr=x;
+		merge_n_z_n_y();
+	}
+	else
+	{
+		tr=n;
+		merge_n_z_o_x();
+	}
+}
+void merge_n_z_OK_w()
+{
+	tw=w;
+	tx=x;
+	ty=y;
+	tz=z;
+}
+void merge_n_z_s_w()
+{
+	if(s>w)
+	{
+		tv=w;
+		merge_n_z_s_x();
+	}
+	else
+	{
+		tv=s;
+		merge_n_z_OK_w();
+	}
+}
+void merge_n_z_r_w()
+{
+	if(r>w)
+	{
+		tu=w;
+		merge_n_z_r_x();
+	}
+	else
+	{
+		tu=r;
+		merge_n_z_s_w();
+	}
+}
+void merge_n_z_q_w()
+{
+	if(q>w)
+	{
+		tt=w;
+		merge_n_z_q_x();
+	}
+	else
+	{
+		tt=q;
+		merge_n_z_r_w();
+	}
+}
+void merge_n_z_p_w()
+{
+	if(p>w)
+	{
+		ts=w;
+		merge_n_z_p_x();
+	}
+	else
+	{
+		ts=p;
+		merge_n_z_q_w();
+	}
+}
+void merge_n_z_o_w()
+{
+	if(o>w)
+	{
+		tr=w;
+		merge_n_z_o_x();
+	}
+	else
+	{
+		tr=o;
+		merge_n_z_p_w();
+	}
+}
+void merge_n_z_n_w()
+{
+	if(n>w)
+	{
+		tq=w;
+		merge_n_z_n_x();
+	}
+	else
+	{
+		tq=n;
+		merge_n_z_o_w();
+	}
+}
+void merge_n_z_OK_v()
+{
+	tv=v;
+	tw=w;
+	tx=x;
+	ty=y;
+	tz=z;
+}
+void merge_n_z_s_v()
+{
+	if(s>v)
+	{
+		tu=v;
+		merge_n_z_s_w();
+	}
+	else
+	{
+		tu=s;
+		merge_n_z_OK_v();
+	}
+}
+void merge_n_z_r_v()
+{
+	if(r>v)
+	{
+		tt=v;
+		merge_n_z_r_w();
+	}
+	else
+	{
+		tt=r;
+		merge_n_z_s_v();
+	}
+}
+void merge_n_z_q_v()
+{
+	if(q>v)
+	{
+		ts=v;
+		merge_n_z_q_w();
+	}
+	else
+	{
+		ts=q;
+		merge_n_z_r_v();
+	}
+}
+void merge_n_z_p_v()
+{
+	if(p>v)
+	{
+		tr=v;
+		merge_n_z_p_w();
+	}
+	else
+	{
+		tr=p;
+		merge_n_z_q_v();
+	}
+}
+void merge_n_z_o_v()
+{
+	if(o>v)
+	{
+		tq=v;
+		merge_n_z_o_w();
+	}
+	else
+	{
+		tq=o;
+		merge_n_z_p_v();
+	}
+}
+void merge_n_z_n_v()
+{
+	if(n>v)
+	{
+		tp=v;
+		merge_n_z_n_w();
+	}
+	else
+	{
+		tp=n;
+		merge_n_z_o_v();
+	}
+}
+void merge_n_z_OK_u()
+{
+	tu=u;
+	tv=v;
+	tw=w;
+	tx=x;
+	ty=y;
+	tz=z;
+}
+void merge_n_z_s_u()
+{
+	if(s>u)
+	{
+		tt=u;
+		merge_n_z_s_v();
+	}
+	else
+	{
+		tt=s;
+		merge_n_z_OK_u();
+	}
+}
+void merge_n_z_r_u()
+{
+	if(r>u)
+	{
+		ts=u;
+		merge_n_z_r_v();
+	}
+	else
+	{
+		ts=r;
+		merge_n_z_s_u();
+	}
+}
+void merge_n_z_q_u()
+{
+	if(q>u)
+	{
+		tr=u;
+		merge_n_z_q_v();
+	}
+	else
+	{
+		tr=q;
+		merge_n_z_r_u();
+	}
+}
+void merge_n_z_p_u()
+{
+	if(p>u)
+	{
+		tq=u;
+		merge_n_z_p_v();
+	}
+	else
+	{
+		tq=p;
+		merge_n_z_q_u();
+	}
+}
+void merge_n_z_o_u()
+{
+	if(o>u)
+	{
+		tp=u;
+		merge_n_z_o_v();
+	}
+	else
+	{
+		tp=o;
+		merge_n_z_p_u();
+	}
+}
+void merge_n_z_n_u()
+{
+	if(n>u)
+	{
+		to=u;
+		merge_n_z_n_v();
+	}
+	else
+	{
+		to=n;
+		merge_n_z_o_u();
+	}
+}
+void merge_n_z_OK_t()
+{
+	tt=t;
+	tu=u;
+	tv=v;
+	tw=w;
+	tx=x;
+	ty=y;
+	tz=z;
+}
+void merge_n_z_s_t()
+{
+	if(s>t)
+	{
+		ts=t;
+		merge_n_z_s_u();
+	}
+	else
+	{
+		ts=s;
+		merge_n_z_OK_t();
+	}
+}
+void merge_n_z_r_t()
+{
+	if(r>t)
+	{
+		tr=t;
+		merge_n_z_r_u();
+	}
+	else
+	{
+		tr=r;
+		merge_n_z_s_t();
+	}
+}
+void merge_n_z_q_t()
+{
+	if(q>t)
+	{
+		tq=t;
+		merge_n_z_q_u();
+	}
+	else
+	{
+		tq=q;
+		merge_n_z_r_t();
+	}
+}
+void merge_n_z_p_t()
+{
+	if(p>t)
+	{
+		tp=t;
+		merge_n_z_p_u();
+	}
+	else
+	{
+		tp=p;
+		merge_n_z_q_t();
+	}
+}
+void merge_n_z_o_t()
+{
+	if(o>t)
+	{
+		to=t;
+		merge_n_z_o_u();
+	}
+	else
+	{
+		to=o;
+		merge_n_z_p_t();
+	}
+}
+void merge_n_z_n_t()
+{
+	if(n>t)
+	{
+		tn=t;
+		merge_n_z_n_u();
+	}
+	else
+	{
+		tn=n;
+		merge_n_z_o_t();
+	}
+}
+void merge_a_z_m_OK()
+{
+	tz=m;
+}
+void merge_a_z_l_OK()
+{
+	ty=l;
+	tz=m;
+}
+void merge_a_z_k_OK()
+{
+	tx=k;
+	ty=l;
+	tz=m;
+}
+void merge_a_z_j_OK()
+{
+	tw=j;
+	tx=k;
+	ty=l;
+	tz=m;
+}
+void merge_a_z_i_OK()
+{
+	tv=i;
+	tw=j;
+	tx=k;
+	ty=l;
+	tz=m;
+}
+void merge_a_z_h_OK()
+{
+	tu=h;
+	tv=i;
+	tw=j;
+	tx=k;
+	ty=l;
+	tz=m;
+}
+void merge_a_z_g_OK()
+{
+	tt=g;
+	tu=h;
+	tv=i;
+	tw=j;
+	tx=k;
+	ty=l;
+	tz=m;
+}
+void merge_a_z_f_OK()
+{
+	ts=f;
+	tt=g;
+	tu=h;
+	tv=i;
+	tw=j;
+	tx=k;
+	ty=l;
+	tz=m;
+}
+void merge_a_z_e_OK()
+{
+	tr=e;
+	ts=f;
+	tt=g;
+	tu=h;
+	tv=i;
+	tw=j;
+	tx=k;
+	ty=l;
+	tz=m;
+}
+void merge_a_z_d_OK()
+{
+	tq=d;
+	tr=e;
+	ts=f;
+	tt=g;
+	tu=h;
+	tv=i;
+	tw=j;
+	tx=k;
+	ty=l;
+	tz=m;
+}
+void merge_a_z_c_OK()
+{
+	tp=c;
+	tq=d;
+	tr=e;
+	ts=f;
+	tt=g;
+	tu=h;
+	tv=i;
+	tw=j;
+	tx=k;
+	ty=l;
+	tz=m;
+}
+void merge_a_z_b_OK()
+{
+	to=b;
+	tp=c;
+	tq=d;
+	tr=e;
+	ts=f;
+	tt=g;
+	tu=h;
+	tv=i;
+	tw=j;
+	tx=k;
+	ty=l;
+	tz=m;
+}
+void merge_a_z_a_OK()
+{
+	tn=a;
+	to=b;
+	tp=c;
+	tq=d;
+	tr=e;
+	ts=f;
+	tt=g;
+	tu=h;
+	tv=i;
+	tw=j;
+	tx=k;
+	ty=l;
+	tz=m;
+}
+void merge_a_z_OK_z()
+{
+	tz=z;
+}
+void merge_a_z_m_z()
+{
+	if(m>z)
+	{
+		ty=z;
+		merge_a_z_m_OK();
+	}
+	else
+	{
+		ty=m;
+		merge_a_z_OK_z();
+	}
+}
+void merge_a_z_l_z()
+{
+	if(l>z)
+	{
+		tx=z;
+		merge_a_z_l_OK();
+	}
+	else
+	{
+		tx=l;
+		merge_a_z_m_z();
+	}
+}
+void merge_a_z_k_z()
+{
+	if(k>z)
+	{
+		tw=z;
+		merge_a_z_k_OK();
+	}
+	else
+	{
+		tw=k;
+		merge_a_z_l_z();
+	}
+}
+void merge_a_z_j_z()
+{
+	if(j>z)
+	{
+		tv=z;
+		merge_a_z_j_OK();
+	}
+	else
+	{
+		tv=j;
+		merge_a_z_k_z();
+	}
+}
+void merge_a_z_i_z()
+{
+	if(i>z)
+	{
+		tu=z;
+		merge_a_z_i_OK();
+	}
+	else
+	{
+		tu=i;
+		merge_a_z_j_z();
+	}
+}
+void merge_a_z_h_z()
+{
+	if(h>z)
+	{
+		tt=z;
+		merge_a_z_h_OK();
+	}
+	else
+	{
+		tt=h;
+		merge_a_z_i_z();
+	}
+}
+void merge_a_z_g_z()
+{
+	if(g>z)
+	{
+		ts=z;
+		merge_a_z_g_OK();
+	}
+	else
+	{
+		ts=g;
+		merge_a_z_h_z();
+	}
+}
+void merge_a_z_f_z()
+{
+	if(f>z)
+	{
+		tr=z;
+		merge_a_z_f_OK();
+	}
+	else
+	{
+		tr=f;
+		merge_a_z_g_z();
+	}
+}
+void merge_a_z_e_z()
+{
+	if(e>z)
+	{
+		tq=z;
+		merge_a_z_e_OK();
+	}
+	else
+	{
+		tq=e;
+		merge_a_z_f_z();
+	}
+}
+void merge_a_z_d_z()
+{
+	if(d>z)
+	{
+		tp=z;
+		merge_a_z_d_OK();
+	}
+	else
+	{
+		tp=d;
+		merge_a_z_e_z();
+	}
+}
+void merge_a_z_c_z()
+{
+	if(c>z)
+	{
+		to=z;
+		merge_a_z_c_OK();
+	}
+	else
+	{
+		to=c;
+		merge_a_z_d_z();
+	}
+}
+void merge_a_z_b_z()
+{
+	if(b>z)
+	{
+		tn=z;
+		merge_a_z_b_OK();
+	}
+	else
+	{
+		tn=b;
+		merge_a_z_c_z();
+	}
+}
+void merge_a_z_a_z()
+{
+	if(a>z)
+	{
+		tm=z;
+		merge_a_z_a_OK();
+	}
+	else
+	{
+		tm=a;
+		merge_a_z_b_z();
+	}
+}
+void merge_a_z_OK_y()
+{
+	ty=y;
+	tz=z;
+}
+void merge_a_z_m_y()
+{
+	if(m>y)
+	{
+		tx=y;
+		merge_a_z_m_z();
+	}
+	else
+	{
+		tx=m;
+		merge_a_z_OK_y();
+	}
+}
+void merge_a_z_l_y()
+{
+	if(l>y)
+	{
+		tw=y;
+		merge_a_z_l_z();
+	}
+	else
+	{
+		tw=l;
+		merge_a_z_m_y();
+	}
+}
+void merge_a_z_k_y()
+{
+	if(k>y)
+	{
+		tv=y;
+		merge_a_z_k_z();
+	}
+	else
+	{
+		tv=k;
+		merge_a_z_l_y();
+	}
+}
+void merge_a_z_j_y()
+{
+	if(j>y)
+	{
+		tu=y;
+		merge_a_z_j_z();
+	}
+	else
+	{
+		tu=j;
+		merge_a_z_k_y();
+	}
+}
+void merge_a_z_i_y()
+{
+	if(i>y)
+	{
+		tt=y;
+		merge_a_z_i_z();
+	}
+	else
+	{
+		tt=i;
+		merge_a_z_j_y();
+	}
+}
+void merge_a_z_h_y()
+{
+	if(h>y)
+	{
+		ts=y;
+		merge_a_z_h_z();
+	}
+	else
+	{
+		ts=h;
+		merge_a_z_i_y();
+	}
+}
+void merge_a_z_g_y()
+{
+	if(g>y)
+	{
+		tr=y;
+		merge_a_z_g_z();
+	}
+	else
+	{
+		tr=g;
+		merge_a_z_h_y();
+	}
+}
+void merge_a_z_f_y()
+{
+	if(f>y)
+	{
+		tq=y;
+		merge_a_z_f_z();
+	}
+	else
+	{
+		tq=f;
+		merge_a_z_g_y();
+	}
+}
+void merge_a_z_e_y()
+{
+	if(e>y)
+	{
+		tp=y;
+		merge_a_z_e_z();
+	}
+	else
+	{
+		tp=e;
+		merge_a_z_f_y();
+	}
+}
+void merge_a_z_d_y()
+{
+	if(d>y)
+	{
+		to=y;
+		merge_a_z_d_z();
+	}
+	else
+	{
+		to=d;
+		merge_a_z_e_y();
+	}
+}
+void merge_a_z_c_y()
+{
+	if(c>y)
+	{
+		tn=y;
+		merge_a_z_c_z();
+	}
+	else
+	{
+		tn=c;
+		merge_a_z_d_y();
+	}
+}
+void merge_a_z_b_y()
+{
+	if(b>y)
+	{
+		tm=y;
+		merge_a_z_b_z();
+	}
+	else
+	{
+		tm=b;
+		merge_a_z_c_y();
+	}
+}
+void merge_a_z_a_y()
+{
+	if(a>y)
+	{
+		tl=y;
+		merge_a_z_a_z();
+	}
+	else
+	{
+		tl=a;
+		merge_a_z_b_y();
+	}
+}
+void merge_a_z_OK_x()
+{
+	tx=x;
+	ty=y;
+	tz=z;
+}
+void merge_a_z_m_x()
+{
+	if(m>x)
+	{
+		tw=x;
+		merge_a_z_m_y();
+	}
+	else
+	{
+		tw=m;
+		merge_a_z_OK_x();
+	}
+}
+void merge_a_z_l_x()
+{
+	if(l>x)
+	{
+		tv=x;
+		merge_a_z_l_y();
+	}
+	else
+	{
+		tv=l;
+		merge_a_z_m_x();
+	}
+}
+void merge_a_z_k_x()
+{
+	if(k>x)
+	{
+		tu=x;
+		merge_a_z_k_y();
+	}
+	else
+	{
+		tu=k;
+		merge_a_z_l_x();
+	}
+}
+void merge_a_z_j_x()
+{
+	if(j>x)
+	{
+		tt=x;
+		merge_a_z_j_y();
+	}
+	else
+	{
+		tt=j;
+		merge_a_z_k_x();
+	}
+}
+void merge_a_z_i_x()
+{
+	if(i>x)
+	{
+		ts=x;
+		merge_a_z_i_y();
+	}
+	else
+	{
+		ts=i;
+		merge_a_z_j_x();
+	}
+}
+void merge_a_z_h_x()
+{
+	if(h>x)
+	{
+		tr=x;
+		merge_a_z_h_y();
+	}
+	else
+	{
+		tr=h;
+		merge_a_z_i_x();
+	}
+}
+void merge_a_z_g_x()
+{
+	if(g>x)
+	{
+		tq=x;
+		merge_a_z_g_y();
+	}
+	else
+	{
+		tq=g;
+		merge_a_z_h_x();
+	}
+}
+void merge_a_z_f_x()
+{
+	if(f>x)
+	{
+		tp=x;
+		merge_a_z_f_y();
+	}
+	else
+	{
+		tp=f;
+		merge_a_z_g_x();
+	}
+}
+void merge_a_z_e_x()
+{
+	if(e>x)
+	{
+		to=x;
+		merge_a_z_e_y();
+	}
+	else
+	{
+		to=e;
+		merge_a_z_f_x();
+	}
+}
+void merge_a_z_d_x()
+{
+	if(d>x)
+	{
+		tn=x;
+		merge_a_z_d_y();
+	}
+	else
+	{
+		tn=d;
+		merge_a_z_e_x();
+	}
+}
+void merge_a_z_c_x()
+{
+	if(c>x)
+	{
+		tm=x;
+		merge_a_z_c_y();
+	}
+	else
+	{
+		tm=c;
+		merge_a_z_d_x();
+	}
+}
+void merge_a_z_b_x()
+{
+	if(b>x)
+	{
+		tl=x;
+		merge_a_z_b_y();
+	}
+	else
+	{
+		tl=b;
+		merge_a_z_c_x();
+	}
+}
+void merge_a_z_a_x()
+{
+	if(a>x)
+	{
+		tk=x;
+		merge_a_z_a_y();
+	}
+	else
+	{
+		tk=a;
+		merge_a_z_b_x();
+	}
+}
+void merge_a_z_OK_w()
+{
+	tw=w;
+	tx=x;
+	ty=y;
+	tz=z;
+}
+void merge_a_z_m_w()
+{
+	if(m>w)
+	{
+		tv=w;
+		merge_a_z_m_x();
+	}
+	else
+	{
+		tv=m;
+		merge_a_z_OK_w();
+	}
+}
+void merge_a_z_l_w()
+{
+	if(l>w)
+	{
+		tu=w;
+		merge_a_z_l_x();
+	}
+	else
+	{
+		tu=l;
+		merge_a_z_m_w();
+	}
+}
+void merge_a_z_k_w()
+{
+	if(k>w)
+	{
+		tt=w;
+		merge_a_z_k_x();
+	}
+	else
+	{
+		tt=k;
+		merge_a_z_l_w();
+	}
+}
+void merge_a_z_j_w()
+{
+	if(j>w)
+	{
+		ts=w;
+		merge_a_z_j_x();
+	}
+	else
+	{
+		ts=j;
+		merge_a_z_k_w();
+	}
+}
+void merge_a_z_i_w()
+{
+	if(i>w)
+	{
+		tr=w;
+		merge_a_z_i_x();
+	}
+	else
+	{
+		tr=i;
+		merge_a_z_j_w();
+	}
+}
+void merge_a_z_h_w()
+{
+	if(h>w)
+	{
+		tq=w;
+		merge_a_z_h_x();
+	}
+	else
+	{
+		tq=h;
+		merge_a_z_i_w();
+	}
+}
+void merge_a_z_g_w()
+{
+	if(g>w)
+	{
+		tp=w;
+		merge_a_z_g_x();
+	}
+	else
+	{
+		tp=g;
+		merge_a_z_h_w();
+	}
+}
+void merge_a_z_f_w()
+{
+	if(f>w)
+	{
+		to=w;
+		merge_a_z_f_x();
+	}
+	else
+	{
+		to=f;
+		merge_a_z_g_w();
+	}
+}
+void merge_a_z_e_w()
+{
+	if(e>w)
+	{
+		tn=w;
+		merge_a_z_e_x();
+	}
+	else
+	{
+		tn=e;
+		merge_a_z_f_w();
+	}
+}
+void merge_a_z_d_w()
+{
+	if(d>w)
+	{
+		tm=w;
+		merge_a_z_d_x();
+	}
+	else
+	{
+		tm=d;
+		merge_a_z_e_w();
+	}
+}
+void merge_a_z_c_w()
+{
+	if(c>w)
+	{
+		tl=w;
+		merge_a_z_c_x();
+	}
+	else
+	{
+		tl=c;
+		merge_a_z_d_w();
+	}
+}
+void merge_a_z_b_w()
+{
+	if(b>w)
+	{
+		tk=w;
+		merge_a_z_b_x();
+	}
+	else
+	{
+		tk=b;
+		merge_a_z_c_w();
+	}
+}
+void merge_a_z_a_w()
+{
+	if(a>w)
+	{
+		tj=w;
+		merge_a_z_a_x();
+	}
+	else
+	{
+		tj=a;
+		merge_a_z_b_w();
+	}
+}
+void merge_a_z_OK_v()
+{
+	tv=v;
+	tw=w;
+	tx=x;
+	ty=y;
+	tz=z;
+}
+void merge_a_z_m_v()
+{
+	if(m>v)
+	{
+		tu=v;
+		merge_a_z_m_w();
+	}
+	else
+	{
+		tu=m;
+		merge_a_z_OK_v();
+	}
+}
+void merge_a_z_l_v()
+{
+	if(l>v)
+	{
+		tt=v;
+		merge_a_z_l_w();
+	}
+	else
+	{
+		tt=l;
+		merge_a_z_m_v();
+	}
+}
+void merge_a_z_k_v()
+{
+	if(k>v)
+	{
+		ts=v;
+		merge_a_z_k_w();
+	}
+	else
+	{
+		ts=k;
+		merge_a_z_l_v();
+	}
+}
+void merge_a_z_j_v()
+{
+	if(j>v)
+	{
+		tr=v;
+		merge_a_z_j_w();
+	}
+	else
+	{
+		tr=j;
+		merge_a_z_k_v();
+	}
+}
+void merge_a_z_i_v()
+{
+	if(i>v)
+	{
+		tq=v;
+		merge_a_z_i_w();
+	}
+	else
+	{
+		tq=i;
+		merge_a_z_j_v();
+	}
+}
+void merge_a_z_h_v()
+{
+	if(h>v)
+	{
+		tp=v;
+		merge_a_z_h_w();
+	}
+	else
+	{
+		tp=h;
+		merge_a_z_i_v();
+	}
+}
+void merge_a_z_g_v()
+{
+	if(g>v)
+	{
+		to=v;
+		merge_a_z_g_w();
+	}
+	else
+	{
+		to=g;
+		merge_a_z_h_v();
+	}
+}
+void merge_a_z_f_v()
+{
+	if(f>v)
+	{
+		tn=v;
+		merge_a_z_f_w();
+	}
+	else
+	{
+		tn=f;
+		merge_a_z_g_v();
+	}
+}
+void merge_a_z_e_v()
+{
+	if(e>v)
+	{
+		tm=v;
+		merge_a_z_e_w();
+	}
+	else
+	{
+		tm=e;
+		merge_a_z_f_v();
+	}
+}
+void merge_a_z_d_v()
+{
+	if(d>v)
+	{
+		tl=v;
+		merge_a_z_d_w();
+	}
+	else
+	{
+		tl=d;
+		merge_a_z_e_v();
+	}
+}
+void merge_a_z_c_v()
+{
+	if(c>v)
+	{
+		tk=v;
+		merge_a_z_c_w();
+	}
+	else
+	{
+		tk=c;
+		merge_a_z_d_v();
+	}
+}
+void merge_a_z_b_v()
+{
+	if(b>v)
+	{
+		tj=v;
+		merge_a_z_b_w();
+	}
+	else
+	{
+		tj=b;
+		merge_a_z_c_v();
+	}
+}
+void merge_a_z_a_v()
+{
+	if(a>v)
+	{
+		ti=v;
+		merge_a_z_a_w();
+	}
+	else
+	{
+		ti=a;
+		merge_a_z_b_v();
+	}
+}
+void merge_a_z_OK_u()
+{
+	tu=u;
+	tv=v;
+	tw=w;
+	tx=x;
+	ty=y;
+	tz=z;
+}
+void merge_a_z_m_u()
+{
+	if(m>u)
+	{
+		tt=u;
+		merge_a_z_m_v();
+	}
+	else
+	{
+		tt=m;
+		merge_a_z_OK_u();
+	}
+}
+void merge_a_z_l_u()
+{
+	if(l>u)
+	{
+		ts=u;
+		merge_a_z_l_v();
+	}
+	else
+	{
+		ts=l;
+		merge_a_z_m_u();
+	}
+}
+void merge_a_z_k_u()
+{
+	if(k>u)
+	{
+		tr=u;
+		merge_a_z_k_v();
+	}
+	else
+	{
+		tr=k;
+		merge_a_z_l_u();
+	}
+}
+void merge_a_z_j_u()
+{
+	if(j>u)
+	{
+		tq=u;
+		merge_a_z_j_v();
+	}
+	else
+	{
+		tq=j;
+		merge_a_z_k_u();
+	}
+}
+void merge_a_z_i_u()
+{
+	if(i>u)
+	{
+		tp=u;
+		merge_a_z_i_v();
+	}
+	else
+	{
+		tp=i;
+		merge_a_z_j_u();
+	}
+}
+void merge_a_z_h_u()
+{
+	if(h>u)
+	{
+		to=u;
+		merge_a_z_h_v();
+	}
+	else
+	{
+		to=h;
+		merge_a_z_i_u();
+	}
+}
+void merge_a_z_g_u()
+{
+	if(g>u)
+	{
+		tn=u;
+		merge_a_z_g_v();
+	}
+	else
+	{
+		tn=g;
+		merge_a_z_h_u();
+	}
+}
+void merge_a_z_f_u()
+{
+	if(f>u)
+	{
+		tm=u;
+		merge_a_z_f_v();
+	}
+	else
+	{
+		tm=f;
+		merge_a_z_g_u();
+	}
+}
+void merge_a_z_e_u()
+{
+	if(e>u)
+	{
+		tl=u;
+		merge_a_z_e_v();
+	}
+	else
+	{
+		tl=e;
+		merge_a_z_f_u();
+	}
+}
+void merge_a_z_d_u()
+{
+	if(d>u)
+	{
+		tk=u;
+		merge_a_z_d_v();
+	}
+	else
+	{
+		tk=d;
+		merge_a_z_e_u();
+	}
+}
+void merge_a_z_c_u()
+{
+	if(c>u)
+	{
+		tj=u;
+		merge_a_z_c_v();
+	}
+	else
+	{
+		tj=c;
+		merge_a_z_d_u();
+	}
+}
+void merge_a_z_b_u()
+{
+	if(b>u)
+	{
+		ti=u;
+		merge_a_z_b_v();
+	}
+	else
+	{
+		ti=b;
+		merge_a_z_c_u();
+	}
+}
+void merge_a_z_a_u()
+{
+	if(a>u)
+	{
+		th=u;
+		merge_a_z_a_v();
+	}
+	else
+	{
+		th=a;
+		merge_a_z_b_u();
+	}
+}
+void merge_a_z_OK_t()
+{
+	tt=t;
+	tu=u;
+	tv=v;
+	tw=w;
+	tx=x;
+	ty=y;
+	tz=z;
+}
+void merge_a_z_m_t()
+{
+	if(m>t)
+	{
+		ts=t;
+		merge_a_z_m_u();
+	}
+	else
+	{
+		ts=m;
+		merge_a_z_OK_t();
+	}
+}
+void merge_a_z_l_t()
+{
+	if(l>t)
+	{
+		tr=t;
+		merge_a_z_l_u();
+	}
+	else
+	{
+		tr=l;
+		merge_a_z_m_t();
+	}
+}
+void merge_a_z_k_t()
+{
+	if(k>t)
+	{
+		tq=t;
+		merge_a_z_k_u();
+	}
+	else
+	{
+		tq=k;
+		merge_a_z_l_t();
+	}
+}
+void merge_a_z_j_t()
+{
+	if(j>t)
+	{
+		tp=t;
+		merge_a_z_j_u();
+	}
+	else
+	{
+		tp=j;
+		merge_a_z_k_t();
+	}
+}
+void merge_a_z_i_t()
+{
+	if(i>t)
+	{
+		to=t;
+		merge_a_z_i_u();
+	}
+	else
+	{
+		to=i;
+		merge_a_z_j_t();
+	}
+}
+void merge_a_z_h_t()
+{
+	if(h>t)
+	{
+		tn=t;
+		merge_a_z_h_u();
+	}
+	else
+	{
+		tn=h;
+		merge_a_z_i_t();
+	}
+}
+void merge_a_z_g_t()
+{
+	if(g>t)
+	{
+		tm=t;
+		merge_a_z_g_u();
+	}
+	else
+	{
+		tm=g;
+		merge_a_z_h_t();
+	}
+}
+void merge_a_z_f_t()
+{
+	if(f>t)
+	{
+		tl=t;
+		merge_a_z_f_u();
+	}
+	else
+	{
+		tl=f;
+		merge_a_z_g_t();
+	}
+}
+void merge_a_z_e_t()
+{
+	if(e>t)
+	{
+		tk=t;
+		merge_a_z_e_u();
+	}
+	else
+	{
+		tk=e;
+		merge_a_z_f_t();
+	}
+}
+void merge_a_z_d_t()
+{
+	if(d>t)
+	{
+		tj=t;
+		merge_a_z_d_u();
+	}
+	else
+	{
+		tj=d;
+		merge_a_z_e_t();
+	}
+}
+void merge_a_z_c_t()
+{
+	if(c>t)
+	{
+		ti=t;
+		merge_a_z_c_u();
+	}
+	else
+	{
+		ti=c;
+		merge_a_z_d_t();
+	}
+}
+void merge_a_z_b_t()
+{
+	if(b>t)
+	{
+		th=t;
+		merge_a_z_b_u();
+	}
+	else
+	{
+		th=b;
+		merge_a_z_c_t();
+	}
+}
+void merge_a_z_a_t()
+{
+	if(a>t)
+	{
+		tg=t;
+		merge_a_z_a_u();
+	}
+	else
+	{
+		tg=a;
+		merge_a_z_b_t();
+	}
+}
+void merge_a_z_OK_s()
+{
+	ts=s;
+	tt=t;
+	tu=u;
+	tv=v;
+	tw=w;
+	tx=x;
+	ty=y;
+	tz=z;
+}
+void merge_a_z_m_s()
+{
+	if(m>s)
+	{
+		tr=s;
+		merge_a_z_m_t();
+	}
+	else
+	{
+		tr=m;
+		merge_a_z_OK_s();
+	}
+}
+void merge_a_z_l_s()
+{
+	if(l>s)
+	{
+		tq=s;
+		merge_a_z_l_t();
+	}
+	else
+	{
+		tq=l;
+		merge_a_z_m_s();
+	}
+}
+void merge_a_z_k_s()
+{
+	if(k>s)
+	{
+		tp=s;
+		merge_a_z_k_t();
+	}
+	else
+	{
+		tp=k;
+		merge_a_z_l_s();
+	}
+}
+void merge_a_z_j_s()
+{
+	if(j>s)
+	{
+		to=s;
+		merge_a_z_j_t();
+	}
+	else
+	{
+		to=j;
+		merge_a_z_k_s();
+	}
+}
+void merge_a_z_i_s()
+{
+	if(i>s)
+	{
+		tn=s;
+		merge_a_z_i_t();
+	}
+	else
+	{
+		tn=i;
+		merge_a_z_j_s();
+	}
+}
+void merge_a_z_h_s()
+{
+	if(h>s)
+	{
+		tm=s;
+		merge_a_z_h_t();
+	}
+	else
+	{
+		tm=h;
+		merge_a_z_i_s();
+	}
+}
+void merge_a_z_g_s()
+{
+	if(g>s)
+	{
+		tl=s;
+		merge_a_z_g_t();
+	}
+	else
+	{
+		tl=g;
+		merge_a_z_h_s();
+	}
+}
+void merge_a_z_f_s()
+{
+	if(f>s)
+	{
+		tk=s;
+		merge_a_z_f_t();
+	}
+	else
+	{
+		tk=f;
+		merge_a_z_g_s();
+	}
+}
+void merge_a_z_e_s()
+{
+	if(e>s)
+	{
+		tj=s;
+		merge_a_z_e_t();
+	}
+	else
+	{
+		tj=e;
+		merge_a_z_f_s();
+	}
+}
+void merge_a_z_d_s()
+{
+	if(d>s)
+	{
+		ti=s;
+		merge_a_z_d_t();
+	}
+	else
+	{
+		ti=d;
+		merge_a_z_e_s();
+	}
+}
+void merge_a_z_c_s()
+{
+	if(c>s)
+	{
+		th=s;
+		merge_a_z_c_t();
+	}
+	else
+	{
+		th=c;
+		merge_a_z_d_s();
+	}
+}
+void merge_a_z_b_s()
+{
+	if(b>s)
+	{
+		tg=s;
+		merge_a_z_b_t();
+	}
+	else
+	{
+		tg=b;
+		merge_a_z_c_s();
+	}
+}
+void merge_a_z_a_s()
+{
+	if(a>s)
+	{
+		tf=s;
+		merge_a_z_a_t();
+	}
+	else
+	{
+		tf=a;
+		merge_a_z_b_s();
+	}
+}
+void merge_a_z_OK_r()
+{
+	tr=r;
+	ts=s;
+	tt=t;
+	tu=u;
+	tv=v;
+	tw=w;
+	tx=x;
+	ty=y;
+	tz=z;
+}
+void merge_a_z_m_r()
+{
+	if(m>r)
+	{
+		tq=r;
+		merge_a_z_m_s();
+	}
+	else
+	{
+		tq=m;
+		merge_a_z_OK_r();
+	}
+}
+void merge_a_z_l_r()
+{
+	if(l>r)
+	{
+		tp=r;
+		merge_a_z_l_s();
+	}
+	else
+	{
+		tp=l;
+		merge_a_z_m_r();
+	}
+}
+void merge_a_z_k_r()
+{
+	if(k>r)
+	{
+		to=r;
+		merge_a_z_k_s();
+	}
+	else
+	{
+		to=k;
+		merge_a_z_l_r();
+	}
+}
+void merge_a_z_j_r()
+{
+	if(j>r)
+	{
+		tn=r;
+		merge_a_z_j_s();
+	}
+	else
+	{
+		tn=j;
+		merge_a_z_k_r();
+	}
+}
+void merge_a_z_i_r()
+{
+	if(i>r)
+	{
+		tm=r;
+		merge_a_z_i_s();
+	}
+	else
+	{
+		tm=i;
+		merge_a_z_j_r();
+	}
+}
+void merge_a_z_h_r()
+{
+	if(h>r)
+	{
+		tl=r;
+		merge_a_z_h_s();
+	}
+	else
+	{
+		tl=h;
+		merge_a_z_i_r();
+	}
+}
+void merge_a_z_g_r()
+{
+	if(g>r)
+	{
+		tk=r;
+		merge_a_z_g_s();
+	}
+	else
+	{
+		tk=g;
+		merge_a_z_h_r();
+	}
+}
+void merge_a_z_f_r()
+{
+	if(f>r)
+	{
+		tj=r;
+		merge_a_z_f_s();
+	}
+	else
+	{
+		tj=f;
+		merge_a_z_g_r();
+	}
+}
+void merge_a_z_e_r()
+{
+	if(e>r)
+	{
+		ti=r;
+		merge_a_z_e_s();
+	}
+	else
+	{
+		ti=e;
+		merge_a_z_f_r();
+	}
+}
+void merge_a_z_d_r()
+{
+	if(d>r)
+	{
+		th=r;
+		merge_a_z_d_s();
+	}
+	else
+	{
+		th=d;
+		merge_a_z_e_r();
+	}
+}
+void merge_a_z_c_r()
+{
+	if(c>r)
+	{
+		tg=r;
+		merge_a_z_c_s();
+	}
+	else
+	{
+		tg=c;
+		merge_a_z_d_r();
+	}
+}
+void merge_a_z_b_r()
+{
+	if(b>r)
+	{
+		tf=r;
+		merge_a_z_b_s();
+	}
+	else
+	{
+		tf=b;
+		merge_a_z_c_r();
+	}
+}
+void merge_a_z_a_r()
+{
+	if(a>r)
+	{
+		te=r;
+		merge_a_z_a_s();
+	}
+	else
+	{
+		te=a;
+		merge_a_z_b_r();
+	}
+}
+void merge_a_z_OK_q()
+{
+	tq=q;
+	tr=r;
+	ts=s;
+	tt=t;
+	tu=u;
+	tv=v;
+	tw=w;
+	tx=x;
+	ty=y;
+	tz=z;
+}
+void merge_a_z_m_q()
+{
+	if(m>q)
+	{
+		tp=q;
+		merge_a_z_m_r();
+	}
+	else
+	{
+		tp=m;
+		merge_a_z_OK_q();
+	}
+}
+void merge_a_z_l_q()
+{
+	if(l>q)
+	{
+		to=q;
+		merge_a_z_l_r();
+	}
+	else
+	{
+		to=l;
+		merge_a_z_m_q();
+	}
+}
+void merge_a_z_k_q()
+{
+	if(k>q)
+	{
+		tn=q;
+		merge_a_z_k_r();
+	}
+	else
+	{
+		tn=k;
+		merge_a_z_l_q();
+	}
+}
+void merge_a_z_j_q()
+{
+	if(j>q)
+	{
+		tm=q;
+		merge_a_z_j_r();
+	}
+	else
+	{
+		tm=j;
+		merge_a_z_k_q();
+	}
+}
+void merge_a_z_i_q()
+{
+	if(i>q)
+	{
+		tl=q;
+		merge_a_z_i_r();
+	}
+	else
+	{
+		tl=i;
+		merge_a_z_j_q();
+	}
+}
+void merge_a_z_h_q()
+{
+	if(h>q)
+	{
+		tk=q;
+		merge_a_z_h_r();
+	}
+	else
+	{
+		tk=h;
+		merge_a_z_i_q();
+	}
+}
+void merge_a_z_g_q()
+{
+	if(g>q)
+	{
+		tj=q;
+		merge_a_z_g_r();
+	}
+	else
+	{
+		tj=g;
+		merge_a_z_h_q();
+	}
+}
+void merge_a_z_f_q()
+{
+	if(f>q)
+	{
+		ti=q;
+		merge_a_z_f_r();
+	}
+	else
+	{
+		ti=f;
+		merge_a_z_g_q();
+	}
+}
+void merge_a_z_e_q()
+{
+	if(e>q)
+	{
+		th=q;
+		merge_a_z_e_r();
+	}
+	else
+	{
+		th=e;
+		merge_a_z_f_q();
+	}
+}
+void merge_a_z_d_q()
+{
+	if(d>q)
+	{
+		tg=q;
+		merge_a_z_d_r();
+	}
+	else
+	{
+		tg=d;
+		merge_a_z_e_q();
+	}
+}
+void merge_a_z_c_q()
+{
+	if(c>q)
+	{
+		tf=q;
+		merge_a_z_c_r();
+	}
+	else
+	{
+		tf=c;
+		merge_a_z_d_q();
+	}
+}
+void merge_a_z_b_q()
+{
+	if(b>q)
+	{
+		te=q;
+		merge_a_z_b_r();
+	}
+	else
+	{
+		te=b;
+		merge_a_z_c_q();
+	}
+}
+void merge_a_z_a_q()
+{
+	if(a>q)
+	{
+		td=q;
+		merge_a_z_a_r();
+	}
+	else
+	{
+		td=a;
+		merge_a_z_b_q();
+	}
+}
+void merge_a_z_OK_p()
+{
+	tp=p;
+	tq=q;
+	tr=r;
+	ts=s;
+	tt=t;
+	tu=u;
+	tv=v;
+	tw=w;
+	tx=x;
+	ty=y;
+	tz=z;
+}
+void merge_a_z_m_p()
+{
+	if(m>p)
+	{
+		to=p;
+		merge_a_z_m_q();
+	}
+	else
+	{
+		to=m;
+		merge_a_z_OK_p();
+	}
+}
+void merge_a_z_l_p()
+{
+	if(l>p)
+	{
+		tn=p;
+		merge_a_z_l_q();
+	}
+	else
+	{
+		tn=l;
+		merge_a_z_m_p();
+	}
+}
+void merge_a_z_k_p()
+{
+	if(k>p)
+	{
+		tm=p;
+		merge_a_z_k_q();
+	}
+	else
+	{
+		tm=k;
+		merge_a_z_l_p();
+	}
+}
+void merge_a_z_j_p()
+{
+	if(j>p)
+	{
+		tl=p;
+		merge_a_z_j_q();
+	}
+	else
+	{
+		tl=j;
+		merge_a_z_k_p();
+	}
+}
+void merge_a_z_i_p()
+{
+	if(i>p)
+	{
+		tk=p;
+		merge_a_z_i_q();
+	}
+	else
+	{
+		tk=i;
+		merge_a_z_j_p();
+	}
+}
+void merge_a_z_h_p()
+{
+	if(h>p)
+	{
+		tj=p;
+		merge_a_z_h_q();
+	}
+	else
+	{
+		tj=h;
+		merge_a_z_i_p();
+	}
+}
+void merge_a_z_g_p()
+{
+	if(g>p)
+	{
+		ti=p;
+		merge_a_z_g_q();
+	}
+	else
+	{
+		ti=g;
+		merge_a_z_h_p();
+	}
+}
+void merge_a_z_f_p()
+{
+	if(f>p)
+	{
+		th=p;
+		merge_a_z_f_q();
+	}
+	else
+	{
+		th=f;
+		merge_a_z_g_p();
+	}
+}
+void merge_a_z_e_p()
+{
+	if(e>p)
+	{
+		tg=p;
+		merge_a_z_e_q();
+	}
+	else
+	{
+		tg=e;
+		merge_a_z_f_p();
+	}
+}
+void merge_a_z_d_p()
+{
+	if(d>p)
+	{
+		tf=p;
+		merge_a_z_d_q();
+	}
+	else
+	{
+		tf=d;
+		merge_a_z_e_p();
+	}
+}
+void merge_a_z_c_p()
+{
+	if(c>p)
+	{
+		te=p;
+		merge_a_z_c_q();
+	}
+	else
+	{
+		te=c;
+		merge_a_z_d_p();
+	}
+}
+void merge_a_z_b_p()
+{
+	if(b>p)
+	{
+		td=p;
+		merge_a_z_b_q();
+	}
+	else
+	{
+		td=b;
+		merge_a_z_c_p();
+	}
+}
+void merge_a_z_a_p()
+{
+	if(a>p)
+	{
+		tc=p;
+		merge_a_z_a_q();
+	}
+	else
+	{
+		tc=a;
+		merge_a_z_b_p();
+	}
+}
+void merge_a_z_OK_o()
+{
+	to=o;
+	tp=p;
+	tq=q;
+	tr=r;
+	ts=s;
+	tt=t;
+	tu=u;
+	tv=v;
+	tw=w;
+	tx=x;
+	ty=y;
+	tz=z;
+}
+void merge_a_z_m_o()
+{
+	if(m>o)
+	{
+		tn=o;
+		merge_a_z_m_p();
+	}
+	else
+	{
+		tn=m;
+		merge_a_z_OK_o();
+	}
+}
+void merge_a_z_l_o()
+{
+	if(l>o)
+	{
+		tm=o;
+		merge_a_z_l_p();
+	}
+	else
+	{
+		tm=l;
+		merge_a_z_m_o();
+	}
+}
+void merge_a_z_k_o()
+{
+	if(k>o)
+	{
+		tl=o;
+		merge_a_z_k_p();
+	}
+	else
+	{
+		tl=k;
+		merge_a_z_l_o();
+	}
+}
+void merge_a_z_j_o()
+{
+	if(j>o)
+	{
+		tk=o;
+		merge_a_z_j_p();
+	}
+	else
+	{
+		tk=j;
+		merge_a_z_k_o();
+	}
+}
+void merge_a_z_i_o()
+{
+	if(i>o)
+	{
+		tj=o;
+		merge_a_z_i_p();
+	}
+	else
+	{
+		tj=i;
+		merge_a_z_j_o();
+	}
+}
+void merge_a_z_h_o()
+{
+	if(h>o)
+	{
+		ti=o;
+		merge_a_z_h_p();
+	}
+	else
+	{
+		ti=h;
+		merge_a_z_i_o();
+	}
+}
+void merge_a_z_g_o()
+{
+	if(g>o)
+	{
+		th=o;
+		merge_a_z_g_p();
+	}
+	else
+	{
+		th=g;
+		merge_a_z_h_o();
+	}
+}
+void merge_a_z_f_o()
+{
+	if(f>o)
+	{
+		tg=o;
+		merge_a_z_f_p();
+	}
+	else
+	{
+		tg=f;
+		merge_a_z_g_o();
+	}
+}
+void merge_a_z_e_o()
+{
+	if(e>o)
+	{
+		tf=o;
+		merge_a_z_e_p();
+	}
+	else
+	{
+		tf=e;
+		merge_a_z_f_o();
+	}
+}
+void merge_a_z_d_o()
+{
+	if(d>o)
+	{
+		te=o;
+		merge_a_z_d_p();
+	}
+	else
+	{
+		te=d;
+		merge_a_z_e_o();
+	}
+}
+void merge_a_z_c_o()
+{
+	if(c>o)
+	{
+		td=o;
+		merge_a_z_c_p();
+	}
+	else
+	{
+		td=c;
+		merge_a_z_d_o();
+	}
+}
+void merge_a_z_b_o()
+{
+	if(b>o)
+	{
+		tc=o;
+		merge_a_z_b_p();
+	}
+	else
+	{
+		tc=b;
+		merge_a_z_c_o();
+	}
+}
+void merge_a_z_a_o()
+{
+	if(a>o)
+	{
+		tb=o;
+		merge_a_z_a_p();
+	}
+	else
+	{
+		tb=a;
+		merge_a_z_b_o();
+	}
+}
+void merge_a_z_OK_n()
+{
+	tn=n;
+	to=o;
+	tp=p;
+	tq=q;
+	tr=r;
+	ts=s;
+	tt=t;
+	tu=u;
+	tv=v;
+	tw=w;
+	tx=x;
+	ty=y;
+	tz=z;
+}
+void merge_a_z_m_n()
+{
+	if(m>n)
+	{
+		tm=n;
+		merge_a_z_m_o();
+	}
+	else
+	{
+		tm=m;
+		merge_a_z_OK_n();
+	}
+}
+void merge_a_z_l_n()
+{
+	if(l>n)
+	{
+		tl=n;
+		merge_a_z_l_o();
+	}
+	else
+	{
+		tl=l;
+		merge_a_z_m_n();
+	}
+}
+void merge_a_z_k_n()
+{
+	if(k>n)
+	{
+		tk=n;
+		merge_a_z_k_o();
+	}
+	else
+	{
+		tk=k;
+		merge_a_z_l_n();
+	}
+}
+void merge_a_z_j_n()
+{
+	if(j>n)
+	{
+		tj=n;
+		merge_a_z_j_o();
+	}
+	else
+	{
+		tj=j;
+		merge_a_z_k_n();
+	}
+}
+void merge_a_z_i_n()
+{
+	if(i>n)
+	{
+		ti=n;
+		merge_a_z_i_o();
+	}
+	else
+	{
+		ti=i;
+		merge_a_z_j_n();
+	}
+}
+void merge_a_z_h_n()
+{
+	if(h>n)
+	{
+		th=n;
+		merge_a_z_h_o();
+	}
+	else
+	{
+		th=h;
+		merge_a_z_i_n();
+	}
+}
+void merge_a_z_g_n()
+{
+	if(g>n)
+	{
+		tg=n;
+		merge_a_z_g_o();
+	}
+	else
+	{
+		tg=g;
+		merge_a_z_h_n();
+	}
+}
+void merge_a_z_f_n()
+{
+	if(f>n)
+	{
+		tf=n;
+		merge_a_z_f_o();
+	}
+	else
+	{
+		tf=f;
+		merge_a_z_g_n();
+	}
+}
+void merge_a_z_e_n()
+{
+	if(e>n)
+	{
+		te=n;
+		merge_a_z_e_o();
+	}
+	else
+	{
+		te=e;
+		merge_a_z_f_n();
+	}
+}
+void merge_a_z_d_n()
+{
+	if(d>n)
+	{
+		td=n;
+		merge_a_z_d_o();
+	}
+	else
+	{
+		td=d;
+		merge_a_z_e_n();
+	}
+}
+void merge_a_z_c_n()
+{
+	if(c>n)
+	{
+		tc=n;
+		merge_a_z_c_o();
+	}
+	else
+	{
+		tc=c;
+		merge_a_z_d_n();
+	}
+}
+void merge_a_z_b_n()
+{
+	if(b>n)
+	{
+		tb=n;
+		merge_a_z_b_o();
+	}
+	else
+	{
+		tb=b;
+		merge_a_z_c_n();
+	}
+}
+void merge_a_z_a_n()
+{
+	if(a>n)
+	{
+		ta=n;
+		merge_a_z_a_o();
+	}
+	else
+	{
+		ta=a;
+		merge_a_z_b_n();
+	}
+}
+int main(void)
+{
+	printf("Please enter 26 numbers:\n");
+	scanf("%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d%d",&a,&b,&c,&d,&e,&f,&g,&h,&i,&j,&k,&l,&m,&n,&o,&p,&q,&r,&s,&t,&u,&v,&w,&x,&y,&z);
+	merge_b_c_b_c();
+	b=tb;
+	c=tc;
+	merge_a_c_a_b();
+	a=ta;
+	b=tb;
+	c=tc;
+	merge_e_f_e_f();
+	e=te;
+	f=tf;
+	merge_d_f_d_e();
+	d=td;
+	e=te;
+	f=tf;
+	merge_a_f_a_d();
+	a=ta;
+	b=tb;
+	c=tc;
+	d=td;
+	e=te;
+	f=tf;
+	merge_h_i_h_i();
+	h=th;
+	i=ti;
+	merge_g_i_g_h();
+	g=tg;
+	h=th;
+	i=ti;
+	merge_j_k_j_k();
+	j=tj;
+	k=tk;
+	merge_l_m_l_m();
+	l=tl;
+	m=tm;
+	merge_j_m_j_l();
+	j=tj;
+	k=tk;
+	l=tl;
+	m=tm;
+	merge_g_m_g_j();
+	g=tg;
+	h=th;
+	i=ti;
+	j=tj;
+	k=tk;
+	l=tl;
+	m=tm;
+	merge_a_m_a_g();
+	a=ta;
+	b=tb;
+	c=tc;
+	d=td;
+	e=te;
+	f=tf;
+	g=tg;
+	h=th;
+	i=ti;
+	j=tj;
+	k=tk;
+	l=tl;
+	m=tm;
+	merge_o_p_o_p();
+	o=to;
+	p=tp;
+	merge_n_p_n_o();
+	n=tn;
+	o=to;
+	p=tp;
+	merge_r_s_r_s();
+	r=tr;
+	s=ts;
+	merge_q_s_q_r();
+	q=tq;
+	r=tr;
+	s=ts;
+	merge_n_s_n_q();
+	n=tn;
+	o=to;
+	p=tp;
+	q=tq;
+	r=tr;
+	s=ts;
+	merge_u_v_u_v();
+	u=tu;
+	v=tv;
+	merge_t_v_t_u();
+	t=tt;
+	u=tu;
+	v=tv;
+	merge_w_x_w_x();
+	w=tw;
+	x=tx;
+	merge_y_z_y_z();
+	y=ty;
+	z=tz;
+	merge_w_z_w_y();
+	w=tw;
+	x=tx;
+	y=ty;
+	z=tz;
+	merge_t_z_t_w();
+	t=tt;
+	u=tu;
+	v=tv;
+	w=tw;
+	x=tx;
+	y=ty;
+	z=tz;
+	merge_n_z_n_t();
+	n=tn;
+	o=to;
+	p=tp;
+	q=tq;
+	r=tr;
+	s=ts;
+	t=tt;
+	u=tu;
+	v=tv;
+	w=tw;
+	x=tx;
+	y=ty;
+	z=tz;
+	merge_a_z_a_n();
+	a=ta;
+	b=tb;
+	c=tc;
+	d=td;
+	e=te;
+	f=tf;
+	g=tg;
+	h=th;
+	i=ti;
+	j=tj;
+	k=tk;
+	l=tl;
+	m=tm;
+	n=tn;
+	o=to;
+	p=tp;
+	q=tq;
+	r=tr;
+	s=ts;
+	t=tt;
+	u=tu;
+	v=tv;
+	w=tw;
+	x=tx;
+	y=ty;
+	z=tz;
+	printf("%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d\n",a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z);
+	return 0;
+}
